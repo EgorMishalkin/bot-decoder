@@ -1,14 +1,18 @@
 from tkinter import *
 from tkinter import filedialog
+from decode import decode
+from record import record
 
 
 def UploadAction(event=None):
     filename = filedialog.askopenfilename()
     # проверка на тип файла
     try:
+        text = decode(filename)
+        record(text)
         if str(filename).split('.')[1] in ['mp3', 'ogg']:
             # print('Selected:', filename)
-            label2 = Label(text=filename, justify=LEFT, background="#40E0D0")
+            label2 = Label(text=text, justify=LEFT, background="#40E0D0")
             label2.place(relx=.2, rely=.3)
         else:
             # print('Not selected')
