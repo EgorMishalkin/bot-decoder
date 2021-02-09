@@ -1,5 +1,6 @@
 import tkinter as tk
 
+
 def createNewWindow():
     newWindow = tk.Toplevel(app)
     labelExample = tk.Label(newWindow, text = "New Window")

@@ -3,8 +3,8 @@ import json
 
 FOLDER_ID = "b1gjigdhd7pe26110eqg" # Идентификатор каталога
 # curl -d "{\"yandexPassportOauthToken\":\"AgAAAAAqxiAZAATuwQ_be5qiR0d3lZ0n6irZf78\"}" "https://iam.api.cloud.yandex.net/iam/v1/tokens"
-IAM_TOKEN = "t1.9euelZrOmoyeyMmUyJ7Pj5ycmIyTze3rnpWamJGJi4uZmZ6Yxp7Hi5CUyIvl9PdLLnd--e9vPV-13fT3C110fvnvbz1ftQ.BovLq7q9F7" \
-            "uz0aNMpOeZwq4SR3UrwOO6phy30ylrJ6ZwzbbNldrKcC8PY-vN2aTrplk0qzQ14Nk8GNw-uJodCA" # IAM-токен
+IAM_TOKEN = "t1.9euelZqPm4nJlsaRmZaNk5PLzM7Gzu3rnpWamJGJi4uZmZ6Yxp7Hi5CUyIvl9Pc-RHR--e9_b1L03fT3fnJxfvnvf29S9A.3zOnAa9lM" \
+            "ApKmJyHvnfrsJUg-xkhsl18gF1D7gAENWdGuDO0EQBhi7UppycbHMd1dfqBkCYwd79Dfr4pmogpAw" # IAM-токен
 
 params = "&".join([
     "topic=general",
@@ -37,5 +37,5 @@ def decode(filename):
             return 'Error'
     # ошибка запроса(SpeechKit принимает запросы до 30 секунд)
     except urllib.error.HTTPError:
-        return 'формат нет'
+        return 'format error'
 
