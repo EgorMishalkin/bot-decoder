@@ -1,10 +1,13 @@
 from tkinter import *
 from tkinter import filedialog
 from decode import decode
-from record import record, clean
+from record import record, clean_file
 from pathlib import Path
 
 history = ""
+
+def clean_history():
+    print('working')
 
 
 def UploadAction(event=None):
@@ -39,7 +42,6 @@ root["bg"] = "#40E0D0"
 label1 = Label(text='История:', justify=LEFT, font="20", background="#40E0D0")
 label1.place(x=10, y=10)
 
-# button
 btn = Button(text="Открыть", background="#0000FF", foreground="#ccc",
              padx="20", pady="8", font="16", command=UploadAction)
 btn.place(x=450, y=80, anchor="c", height=120, width=100, bordermode=OUTSIDE)
@@ -48,11 +50,11 @@ btn2 = Button(text="Помощь", background="#708090", foreground="#ccc", padx
 btn2.place(x=450, y=180, anchor="c", height=60, width=100)
 
 btn3 = Button(text="Очистить файл", background="#BA55D3",
-              foreground="#ccc", padx="14", pady="7", font="13", command=clean)
+              foreground="#ccc", padx="14", pady="7", font="13", command=clean_file)
 btn3.place(x=10, y=150, height=60, width=180)
 
 btn4 = Button(text="Очистить историю", background="#BA55D3",
-              foreground="#ccc", padx="14", pady="7", font="13", command=clean)
+              foreground="#ccc", padx="14", pady="7", font="13", command=clean_history)
 btn4.place(x=200, y=150, height=60, width=180)
 
 

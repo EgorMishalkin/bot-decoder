@@ -37,5 +37,5 @@ def decode(filename):
             return 'Error'
     # ошибка запроса(SpeechKit принимает запросы до 30 секунд)
     except urllib.error.HTTPError:
-        return 'формат файла не подходит(длина больше 30 секунд)'
+        return 'формат нет'
 
